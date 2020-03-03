@@ -2,16 +2,15 @@
   <div id="app">
   <nav class="navbar navbar-expand-lg navbar-light shadow mb-4">
     <div class="container">
-      <router-link to="/">ToDos</router-link> 
+      <router-link class="navbar-brand" to="/">ToDos</router-link> 
       <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto mt-2">
-      </ul>
-      <router-link to="/about">About</router-link>
+        <ul class="navbar-nav ml-auto mt-2">
+        </ul>
       </div>
     </div>
     </nav>
     <div class="container">
-      <router-view />
+      <router-view :todos="$store.state.todos"/>
     </div>
   </div>
 </template>
